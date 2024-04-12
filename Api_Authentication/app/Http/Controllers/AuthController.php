@@ -19,7 +19,7 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        return "Đawnng nhập thành công";
+        return "Đăng nhập thành công";
     }
     public function profile(){
         return response()->json(auth('api')->user());
