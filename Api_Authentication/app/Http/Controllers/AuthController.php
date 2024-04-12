@@ -10,6 +10,7 @@ class AuthController extends Controller
     {
         $this->middleware('auth:api', ['except' => ['login']]);
     }
+    
     public function login()
     {
         $credentials = request(['email', 'password']);
@@ -18,7 +19,7 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        return $this->respondWithToken($token);
+        return "Đawnng nhập thành công";
     }
     public function profile(){
         return response()->json(auth('api')->user());
